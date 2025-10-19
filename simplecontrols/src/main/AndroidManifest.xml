@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".ViewGravityActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -20,7 +23,7 @@
         </activity>
         <activity android:name=".TextViewActivity" />
         <activity android:name=".ViewBorderActivity" />
-        <activity android:name=".ViewMarginActivity"/>
+        <activity android:name=".ViewMarginActivity" />
     </application>
 
 </manifest>
