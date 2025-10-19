@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rowCount="2"
+    android:columnCount="2">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_columnWeight="1"
+        android:text="红色"
+        android:textColor="#000000"
+        android:background="#ff0000"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_columnWeight="1"
+        android:text="绿色"
+        android:textColor="#000000"
+        android:background="#00ff00"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_columnWeight="1"
+        android:text="蓝色"
+        android:textColor="#000000"
+        android:background="#0000ff"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_columnWeight="1"
+        android:text="紫色"
+        android:textColor="#000000"
+        android:background="#341123"/>
+
+</GridLayout>
