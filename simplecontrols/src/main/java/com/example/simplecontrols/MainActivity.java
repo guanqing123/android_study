@@ -41,5 +41,26 @@ public class MainActivity extends AppCompatActivity {
             intent.setClass(MainActivity.this, ScrollViewActivity.class);
             startActivity(intent);
         });
+        // jump to button_view
+        Button to_button_view = findViewById(R.id.to_button_view);
+        to_button_view.setOnClickListener(tv -> {
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, ButtonStyleActivity.class);
+            startActivity(intent);
+        });
+        // jump to button_click
+        Button to_button_click = findViewById(R.id.to_button_click);
+        to_button_click.setOnClickListener(tv -> {
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, ButtonClickActivity.class);
+            startActivity(intent);
+        });
+        // jump to button_enable
+        Button to_button_enable = findViewById(R.id.to_button_enable);
+        to_button_enable.setOnClickListener(tv -> {
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, ButtonEnableActivity.class);
+            startActivity(intent);
+        });
     }
 }

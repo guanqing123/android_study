@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".ButtonEnableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ButtonClickActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ButtonStyleActivity"
+            android:exported="false" />
+        <activity
             android:name=".ScrollViewActivity"
             android:exported="false" />
         <activity
