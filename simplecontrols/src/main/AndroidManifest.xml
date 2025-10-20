@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".ImageScaleActivity"
+            android:exported="false" />
+        <activity
             android:name=".ButtonEnableActivity"
             android:exported="false" />
         <activity

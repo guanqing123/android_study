@@ -62,5 +62,12 @@ public class MainActivity extends AppCompatActivity {
             intent.setClass(MainActivity.this, ButtonEnableActivity.class);
             startActivity(intent);
         });
+        // jump to image_view
+        Button to_image_view = findViewById(R.id.to_image_view);
+        to_image_view.setOnClickListener(tv -> {
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, ImageScaleActivity.class);
+            startActivity(intent);
+        });
     }
 }
