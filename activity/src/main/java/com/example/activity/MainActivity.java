@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         findViewById(R.id.jump_to_actStart).setOnClickListener(this);
         findViewById(R.id.jump_to_first).setOnClickListener(this);
+        findViewById(R.id.jump_to_login).setOnClickListener(this);
     }
 
     @Override
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.jump_to_first:
                 startActivity(new Intent(this, JumpFirstActivity.class));
+                break;
+            case R.id.jump_to_login:
+                startActivity(new Intent(this, LoginActivity.class));
                 break;
         }
     }
