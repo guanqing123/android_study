@@ -13,10 +13,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.jump_to_actStart).setOnClickListener(this);
+        findViewById(R.id.jump_to_first).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        startActivity(new Intent(this, ActStartActivity.class));
+        switch (v.getId()) {
+            case R.id.jump_to_actStart:
+                startActivity(new Intent(this, ActStartActivity.class));
+                break;
+            case R.id.jump_to_first:
+                startActivity(new Intent(this, JumpFirstActivity.class));
+                break;
+        }
     }
 }
