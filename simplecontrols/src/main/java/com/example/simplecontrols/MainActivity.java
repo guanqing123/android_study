@@ -34,5 +34,12 @@ public class MainActivity extends AppCompatActivity {
             intent.setClass(MainActivity.this, ViewMarginActivity.class);
             startActivity(intent);
         });
+        // jump to scroll_view
+        Button to_scroll_view = findViewById(R.id.to_scroll_view);
+        to_scroll_view.setOnClickListener(tv -> {
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, ScrollViewActivity.class);
+            startActivity(intent);
+        });
     }
 }
