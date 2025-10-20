@@ -76,5 +76,12 @@ public class MainActivity extends AppCompatActivity {
             intent.setClass(MainActivity.this, ImageTextActivity.class);
             startActivity(intent);
         });
+        // jump to calculator
+        Button to_calculator = findViewById(R.id.to_calculator);
+        to_calculator.setOnClickListener(tv -> {
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, CalculatorActivity.class);
+            startActivity(intent);
+        });
     }
 }
