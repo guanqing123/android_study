@@ -11,7 +11,12 @@
         android:theme="@style/Theme.MyApplication">
         <activity
             android:name=".CalculatorActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.GQ" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ImageTextActivity"
             android:exported="false" />

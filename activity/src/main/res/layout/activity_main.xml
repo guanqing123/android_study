@@ -16,6 +16,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/jump_to_action_uri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="jump_to_action_uri"
+        app:layout_constraintBottom_toBottomOf="@+id/jump_to_login"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/jump_to_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,6 +44,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 <!--再加一个按钮,跳转到 JumpFirstActivity-->
     <Button
         android:id="@+id/jump_to_first"
