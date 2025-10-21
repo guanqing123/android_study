@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".ActReceiveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActSendActivity"
+            android:exported="false" />
+        <activity
             android:name=".ActionUriActivity"
             android:exported="false" />
         <activity
