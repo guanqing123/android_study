@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.jump_to_login).setOnClickListener(this);
         findViewById(R.id.jump_to_action_uri).setOnClickListener(this);
         findViewById(R.id.jump_to_actSend).setOnClickListener(this);
+        findViewById(R.id.jump_to_actRequest).setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.jump_to_actSend:
                 startActivity(new Intent(this, ActSendActivity.class));
+                break;
+            case R.id.jump_to_actRequest:
+                startActivity(new Intent(this, ActRequestActivity.class));
                 break;
         }
     }

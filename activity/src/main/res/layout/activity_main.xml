@@ -16,54 +16,57 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/jump_to_action_uri"
+        android:id="@+id/jump_to_actStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="jump_to_action_uri"
-        app:layout_constraintBottom_toBottomOf="@+id/jump_to_login"
+        android:text="jump_to_actStart"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/jump_to_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="jump_to_first"
+        app:layout_constraintTop_toBottomOf="@id/jump_to_actStart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/jump_to_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="jump_to_login"
-        app:layout_constraintBottom_toBottomOf="@id/jump_to_actStart"
+        app:layout_constraintTop_toBottomOf="@id/jump_to_first"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
-        android:id="@+id/jump_to_actStart"
+        android:id="@+id/jump_to_action_uri"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="jump_to_actStart"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="jump_to_action_uri"
+        app:layout_constraintTop_toBottomOf="@id/jump_to_login"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/jump_to_actSend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="jump_to_actSend"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jump_to_action_uri"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/jump_to_first"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
-<!--再加一个按钮,跳转到 JumpFirstActivity-->
     <Button
-        android:id="@+id/jump_to_first"
+        android:id="@+id/jump_to_actRequest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="jump_to_first"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="jump_to_actResponse"
+        app:layout_constraintTop_toBottomOf="@id/jump_to_actSend"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/jump_to_actStart" />
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
