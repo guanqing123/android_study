@@ -124,7 +124,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
                 return Double.parseDouble(firstNum) + Double.parseDouble(secondNum);
             case "➖":
                 return Double.parseDouble(firstNum) - Double.parseDouble(secondNum);
-            case "✖":
+            case "✖️":
                 return Double.parseDouble(firstNum) * Double.parseDouble(secondNum);
             case "➗":
                 return Double.parseDouble(firstNum) / Double.parseDouble(secondNum);
