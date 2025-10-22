@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Activity</string>
     <string name="weather_str">今天晴天!</string>
+    <string name="login_please">请先登录</string>
+    <string name="login">登录</string>
+    <string name="param">传参活动</string>
+    <string name="meta_data">元数据活动</string>
 </resources>

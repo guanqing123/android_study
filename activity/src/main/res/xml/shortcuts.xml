@@ -1,0 +1,41 @@
+<?xml version ="1.0" encoding ="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="first"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutDisabledMessage="@string/login_please"
+        android:shortcutLongLabel="@string/login"
+        android:shortcutShortLabel="@string/login">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.activity.LoginActivity"
+            android:targetPackage="com.example.activity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="second"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutLongLabel="@string/param"
+        android:shortcutShortLabel="@string/param">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.activity.ActRequestActivity"
+            android:targetPackage="com.example.activity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="third"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutLongLabel="@string/meta_data"
+        android:shortcutShortLabel="@string/meta_data">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.activity.MetaDataActivity"
+            android:targetPackage="com.example.activity" />
+    </shortcut>
+
+</shortcuts>
