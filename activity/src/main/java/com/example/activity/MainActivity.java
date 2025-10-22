@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.jump_to_actSend).setOnClickListener(this);
         findViewById(R.id.jump_to_actRequest).setOnClickListener(this);
         findViewById(R.id.jump_to_readString).setOnClickListener(this);
+        findViewById(R.id.jump_to_metaData).setOnClickListener(this);
     }
 
     @Override
@@ -44,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.jump_to_readString:
                 startActivity(new Intent(this, ReadStringActivity.class));
+                break;
+            case R.id.jump_to_metaData:
+                startActivity(new Intent(this, MetaDataActivity.class));
                 break;
         }
     }

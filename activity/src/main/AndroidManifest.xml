@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".MetaDataActivity"
+            android:exported="false">
+            <meta-data android:name="weather" android:value="meta data - 晴天"/>
+        </activity>
+        <activity
             android:name=".ReadStringActivity"
             android:exported="false" />
         <activity
