@@ -27,8 +27,9 @@
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2609375" />
         <entry key="middlecontrols/src/main/res/drawable/shape_oval_rose.xml" value="0.2609375" />
         <entry key="middlecontrols/src/main/res/drawable/shape_rect_gold.xml" value="0.2609375" />
+        <entry key="middlecontrols/src/main/res/layout/activity_drawable_nine.xml" value="0.25" />
         <entry key="middlecontrols/src/main/res/layout/activity_drawable_shape.xml" value="0.25" />
-        <entry key="middlecontrols/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="middlecontrols/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="simplecontrols/src/main/res/layout/activity_button_click.xml" value="0.25" />
         <entry key="simplecontrols/src/main/res/layout/activity_button_enable.xml" value="0.25" />
         <entry key="simplecontrols/src/main/res/layout/activity_button_style.xml" value="0.25" />
