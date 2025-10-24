@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_drawable_shape).setOnClickListener(this);
         findViewById(R.id.btn_drawable_nine).setOnClickListener(this);
+        findViewById(R.id.btn_drawable_state).setOnClickListener(this);
     }
 
     @Override
@@ -28,6 +29,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_drawable_nine:{
                 Intent intent = new Intent();
                 intent.setClass(this, DrawableNineActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_drawable_state:{
+                Intent intent = new Intent();
+                intent.setClass(this, DrawableStateActivity.class);
                 startActivity(intent);
                 break;
             }
