@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".EditBorderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditSimpleActivity"
+            android:exported="false" />
+        <activity
             android:name=".RadioHorizontalActivity"
             android:exported="false" />
         <activity
