@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_radio_horizontal).setOnClickListener(this);
         findViewById(R.id.btn_edit_simple).setOnClickListener(this);
         findViewById(R.id.btn_edit_border).setOnClickListener(this);
+        findViewById(R.id.btn_edit_focus).setOnClickListener(this);
     }
 
     @Override
@@ -77,6 +78,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_edit_border:{
                 Intent intent = new Intent();
                 intent.setClass(this, EditBorderActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_edit_focus:{
+                Intent intent = new Intent();
+                intent.setClass(this, EditFocusActivity.class);
                 startActivity(intent);
                 break;
             }
