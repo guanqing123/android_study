@@ -36,6 +36,7 @@
         <entry key="middlecontrols/src/main/res/layout/activity_drawable_shape.xml" value="0.1" />
         <entry key="middlecontrols/src/main/res/layout/activity_drawable_state.xml" value="0.1" />
         <entry key="middlecontrols/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="middlecontrols/src/main/res/layout/activity_radio_horizontal.xml" value="0.1" />
         <entry key="middlecontrols/src/main/res/layout/activity_switch_default.xml" value="0.25" />
         <entry key="middlecontrols/src/main/res/layout/activity_switch_iosactivity.xml" value="0.25" />
         <entry key="simplecontrols/src/main/res/layout/activity_button_click.xml" value="0.25" />
