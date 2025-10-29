@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_edit_border).setOnClickListener(this);
         findViewById(R.id.btn_edit_focus).setOnClickListener(this);
         findViewById(R.id.btn_alert_dialog).setOnClickListener(this);
+        findViewById(R.id.btn_date_picker).setOnClickListener(this);
     }
 
     @Override
@@ -91,6 +92,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_alert_dialog:{
                 Intent intent = new Intent();
                 intent.setClass(this, AlertDialogActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_date_picker:{
+                Intent intent = new Intent();
+                intent.setClass(this, DatePickerActivity.class);
                 startActivity(intent);
                 break;
             }
