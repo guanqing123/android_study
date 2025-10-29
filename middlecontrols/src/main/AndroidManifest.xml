@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".AlertDialogActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditFocusActivity"
             android:exported="false" />
         <activity
