@@ -6,133 +6,112 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btn_drawable_shape"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="DrawableShape"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_drawable_nine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="DrawableNine"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_drawable_shape" />
+            <Button
+                android:id="@+id/btn_drawable_shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DrawableShape"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_drawable_state"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="DrawableState"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_drawable_nine" />
+            <Button
+                android:id="@+id/btn_drawable_nine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DrawableNine"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_checkbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="CheckBox"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_drawable_state" />
+            <!-- 将所有其他按钮都放在这里 -->
+            <Button
+                android:id="@+id/btn_drawable_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DrawableState"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_switch_default"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="SwitchDefault"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_checkbox" />
+            <Button
+                android:id="@+id/btn_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CheckBox"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_switch_ios"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="SwitchIOS"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_switch_default" />
+            <Button
+                android:id="@+id/btn_switch_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SwitchDefault"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_radio_horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="RadioHorizontal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_switch_ios" />
+            <Button
+                android:id="@+id/btn_switch_ios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SwitchIOS"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_edit_simple"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="EditSimple"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_radio_horizontal" />
+            <Button
+                android:id="@+id/btn_radio_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RadioHorizontal"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_edit_border"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="EditBorder"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_edit_simple" />
+            <Button
+                android:id="@+id/btn_edit_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EditSimple"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_edit_focus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="EditFocus"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_edit_border" />
+            <Button
+                android:id="@+id/btn_edit_border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EditBorder"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_alert_dialog"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="AlertDialog"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_edit_focus" />
+            <Button
+                android:id="@+id/btn_edit_focus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EditFocus"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_date_picker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="DatePicker"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_alert_dialog" />
+            <Button
+                android:id="@+id/btn_alert_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AlertDialog"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DatePicker"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TimePicker"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
