@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_alert_dialog).setOnClickListener(this);
         findViewById(R.id.btn_date_picker).setOnClickListener(this);
         findViewById(R.id.btn_time_picker).setOnClickListener(this);
+        findViewById(R.id.btn_login_main).setOnClickListener(this);
     }
 
     @Override
@@ -105,6 +106,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_time_picker:{
                 Intent intent = new Intent();
                 intent.setClass(this, TimePickerActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_login_main:{
+                Intent intent = new Intent();
+                intent.setClass(this, LoginMainActivity.class);
                 startActivity(intent);
                 break;
             }

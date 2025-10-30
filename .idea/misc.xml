@@ -43,10 +43,13 @@
         <entry key="middlecontrols/src/main/res/layout/activity_edit_border.xml" value="0.1" />
         <entry key="middlecontrols/src/main/res/layout/activity_edit_focus.xml" value="0.234375" />
         <entry key="middlecontrols/src/main/res/layout/activity_edit_simple.xml" value="0.1" />
+        <entry key="middlecontrols/src/main/res/layout/activity_login_forget.xml" value="0.1" />
+        <entry key="middlecontrols/src/main/res/layout/activity_login_main.xml" value="0.25" />
         <entry key="middlecontrols/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="middlecontrols/src/main/res/layout/activity_radio_horizontal.xml" value="0.1" />
         <entry key="middlecontrols/src/main/res/layout/activity_switch_default.xml" value="0.25" />
         <entry key="middlecontrols/src/main/res/layout/activity_switch_iosactivity.xml" value="0.25" />
+        <entry key="middlecontrols/src/main/res/layout/activity_time_picker.xml" value="0.23489583333333333" />
         <entry key="simplecontrols/src/main/res/layout/activity_button_click.xml" value="0.25" />
         <entry key="simplecontrols/src/main/res/layout/activity_button_enable.xml" value="0.25" />
         <entry key="simplecontrols/src/main/res/layout/activity_button_style.xml" value="0.25" />

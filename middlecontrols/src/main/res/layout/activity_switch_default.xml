@@ -23,7 +23,7 @@
             android:id="@+id/sw_status"
             android:layout_width="80dp"
             android:layout_height="30dp"
-            android:layout_gravity="end"
+            android:layout_gravity="right"
             android:padding="5dp"/>
     </LinearLayout>
 
