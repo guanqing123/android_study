@@ -12,8 +12,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         findViewById(R.id.btn_share_write).setOnClickListener(this);
+        findViewById(R.id.btn_database).setOnClickListener(this);
     }
 
     @Override
@@ -21,6 +21,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_share_write: {
                 Intent intent = new Intent(this, ShareWriteActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_database: {
+                Intent intent = new Intent(this, DatabaseActivity.class);
                 startActivity(intent);
                 break;
             }
