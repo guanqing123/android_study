@@ -3,6 +3,7 @@ package com.example.middlecontrols;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -33,6 +34,7 @@ public class LoginMainActivity extends AppCompatActivity implements RadioGroup.O
     private RadioButton rb_verify_code;
     private String verifyCode;
     private String password = "111111";
+    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,21 @@ public class LoginMainActivity extends AppCompatActivity implements RadioGroup.O
         // 登录
         Button btn_login = findViewById(R.id.btn_login);
         btn_login.setOnClickListener(this);
+
+        // 保存登录信息
+        preferences = getSharedPreferences("rememberMe", Context.MODE_PRIVATE);
+        loadRememberMe();
+    }
+
+    private void loadRememberMe() {
+        boolean remember = preferences.getBoolean("remember", false);
+        if (remember) {
+            String phone = preferences.getString("phone", "");
+            if (!phone.isEmpty()) et_phone.setText(phone);
+            String password = preferences.getString("password", "");
+            if (!password.isEmpty()) et_password.setText(password);
+            ck_remember.setChecked(true);
+        }
     }
 
     @Override
@@ -118,6 +135,14 @@ public class LoginMainActivity extends AppCompatActivity implements RadioGroup.O
                     if (!password.equals(et_password.getText().toString())) {
                         Toast.makeText(this, "请输入正确的密码", Toast.LENGTH_SHORT).show();
                         return;
+                    }
+                    // 是否密码登录 且记住密码
+                    if (ck_remember.isChecked()) {
+                        SharedPreferences.Editor edit = preferences.edit();
+                        edit.putString("phone", phone);
+                        edit.putString("password", et_password.getText().toString());
+                        edit.putBoolean("remember",ck_remember.isChecked());
+                        edit.commit();
                     }
                     // 提示用户登录成功
                     loginSuccess();
