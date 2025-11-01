@@ -27,6 +27,13 @@
                 android:layout_height="wrap_content"
                 android:text="DataBase"
                 android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_sqlite_helper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SQLiteHelper"
+                android:textAllCaps="false"/>
         </LinearLayout>
     </ScrollView>
 
