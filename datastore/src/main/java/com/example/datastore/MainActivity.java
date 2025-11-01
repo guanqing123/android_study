@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_share_write).setOnClickListener(this);
         findViewById(R.id.btn_database).setOnClickListener(this);
         findViewById(R.id.btn_sqlite_helper).setOnClickListener(this);
+        findViewById(R.id.btn_login_sqlite).setOnClickListener(this);
     }
 
     @Override
@@ -32,6 +33,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_sqlite_helper: {
                 Intent intent = new Intent(this, SQLiteHelperActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_login_sqlite: {
+                Intent intent = new Intent(this, LoginSQLiteActivity.class);
                 startActivity(intent);
                 break;
             }

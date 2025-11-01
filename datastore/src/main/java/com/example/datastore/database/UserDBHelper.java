@@ -15,7 +15,7 @@ public class UserDBHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "user.db";
     private static final String TABLE_NAME = "user_info";
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
     private static UserDBHelper instance = null;
     private SQLiteDatabase mRDB = null;
     private SQLiteDatabase mWDB = null;
@@ -75,7 +75,10 @@ public class UserDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        String sql = "alter table "+TABLE_NAME+" add column phone varchar;";
+        db.execSQL(sql);
+        sql = "alter table "+TABLE_NAME+" add column password varchar;";
+        db.execSQL(sql);
     }
 
     public long insert(User user) {
@@ -91,6 +94,29 @@ public class UserDBHelper extends SQLiteOpenHelper {
         // 倘若不给定字段名，insert 语句就成了这样：insert into person() values ()，显然这不满足标准 SQL 的语法。
         // 如果第三个参数 values 不为 Null 并且元素的个数大于 0，可以把第二个参数设置为 null。
         return mWDB.insert(TABLE_NAME, null, values);
+    }
+
+    public long insertTransaction(User user) {
+        ContentValues values = new ContentValues();
+        values.put("name", user.name);
+        values.put("age", user.age);
+        values.put("height", user.height);
+        values.put("weight", user.weight);
+        values.put("married", user.married);
+        long row = 0;
+        try {
+            mWDB.beginTransaction();
+            row += mWDB.insert(TABLE_NAME, null, values);
+            int i = 10 / 0;
+            row += mWDB.insert(TABLE_NAME, null, values);
+            mWDB.setTransactionSuccessful();
+            return row;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        } finally {
+            mWDB.endTransaction();
+        }
     }
 
     public long deleteByName(String name){
@@ -129,7 +155,8 @@ public class UserDBHelper extends SQLiteOpenHelper {
 
     public List<User> queryByName(String name){
         List<User> list = new ArrayList<>();
-        Cursor cursor = mRDB.query(TABLE_NAME, null, "name=?", new String[]{name}, null, null, null);
+        Cursor cursor = mRDB.query(TABLE_NAME, null, "name=?",
+                new String[]{name}, null, null, null);
         while (cursor.moveToNext()) {
             User user = new User();
             user.id = cursor.getInt(cursor.getColumnIndex("_id"));
