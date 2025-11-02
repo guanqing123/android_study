@@ -41,6 +41,13 @@
                 android:layout_height="wrap_content"
                 android:text="LoginSQLite"
                 android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_file_write"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FileWrite"
+                android:textAllCaps="false"/>
         </LinearLayout>
     </ScrollView>
 
