@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请选择你喜欢的图片"/>
+
+    <Button
+        android:id="@+id/btn_bird"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择鸟" />
+
+    <Button
+        android:id="@+id/btn_flower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择花" />
+
+</LinearLayout>
