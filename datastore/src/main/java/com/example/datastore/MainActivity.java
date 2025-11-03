@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("gq", "MainActivity onCreate");
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_share_write).setOnClickListener(this);
         findViewById(R.id.btn_database).setOnClickListener(this);
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_login_sqlite).setOnClickListener(this);
         findViewById(R.id.btn_file_write).setOnClickListener(this);
         findViewById(R.id.btn_image_write).setOnClickListener(this);
+        findViewById(R.id.btn_app_write).setOnClickListener(this);
     }
 
     @Override
@@ -50,6 +53,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_image_write: {
                 Intent intent = new Intent(this, ImageWriteActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_app_write: {
+                Intent intent = new Intent(this, AppWriteActivity.class);
                 startActivity(intent);
                 break;
             }
