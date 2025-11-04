@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.datastore.entity.CartInfo;
 import com.example.datastore.entity.GoodsInfo;
 
 import java.util.ArrayList;
@@ -121,6 +122,50 @@ public class ShoppingDBHelper extends SQLiteOpenHelper {
             info.setDescription(cursor.getString(cursor.getColumnIndex("description")));
             info.setPrice(cursor.getFloat(cursor.getColumnIndex("price")));
             info.setPicPath(cursor.getString(cursor.getColumnIndex("pic_path")));
+            list.add(info);
+        }
+        return list;
+    }
+
+    public void addCarInfo(GoodsInfo info) {
+        // 判断是否已经添加过
+        Cursor cursor = mRDB.rawQuery("SELECT * FROM " + TABLE_CART_INFO + " WHERE goods_id = ?", new String[]{info.getId() + ""});
+        if (cursor.moveToNext()) {
+            // 已经添加过,则更新数量
+            int count = cursor.getInt(cursor.getColumnIndex("count"));
+            mWDB.execSQL("UPDATE " + TABLE_CART_INFO + " SET count = ? WHERE goods_id = ?", new Object[]{count + 1, info.getId()});
+        } else {
+            // 没有添加过,则插入一条新记录
+            ContentValues values = new ContentValues();
+            values.put("goods_id", info.getId());
+            values.put("count", 1);
+            mWDB.insert(TABLE_CART_INFO, null, values);
+        }
+    }
+
+    public int getCartCount() {
+        Cursor cursor = mRDB.rawQuery("SELECT SUM(count) FROM " + TABLE_CART_INFO, null);
+        if (cursor.moveToNext()) {
+            int count = cursor.getInt(0);
+            return count;
+        }
+        return 0;
+    }
+
+    public List<CartInfo> queryAllCartInfo() {
+        List<CartInfo> list = new ArrayList<>();
+        Cursor cursor = mRDB.rawQuery("SELECT * FROM " + TABLE_CART_INFO + " AS cart INNER JOIN " + TABLE_GOODS_INFO + " AS goods ON cart.goods_id = goods._id", null);
+        while (cursor.moveToNext()) {
+            CartInfo info = new CartInfo();
+            info.setId(cursor.getInt(cursor.getColumnIndex("_id")));
+            info.setGoodsId(cursor.getInt(cursor.getColumnIndex("goods_id")));
+            info.setCount(cursor.getInt(cursor.getColumnIndex("count")));
+            GoodsInfo goodsInfo = new GoodsInfo();
+            goodsInfo.setName(cursor.getString(cursor.getColumnIndex("name")));
+            goodsInfo.setDescription(cursor.getString(cursor.getColumnIndex("description")));
+            goodsInfo.setPrice(cursor.getFloat(cursor.getColumnIndex("price")));
+            goodsInfo.setPicPath(cursor.getString(cursor.getColumnIndex("pic_path")));
+            info.setGoodsInfo(goodsInfo);
             list.add(info);
         }
         return list;
