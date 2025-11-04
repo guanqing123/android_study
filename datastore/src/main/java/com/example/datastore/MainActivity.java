@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_file_write).setOnClickListener(this);
         findViewById(R.id.btn_image_write).setOnClickListener(this);
         findViewById(R.id.btn_app_write).setOnClickListener(this);
+        findViewById(R.id.btn_shopping_channel).setOnClickListener(this);
     }
 
     @Override
@@ -58,6 +59,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_app_write: {
                 Intent intent = new Intent(this, AppWriteActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_shopping_channel: {
+                Intent intent = new Intent(this, ShoppingChannelActivity.class);
                 startActivity(intent);
                 break;
             }
