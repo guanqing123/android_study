@@ -2,11 +2,13 @@ package com.example.datastore.database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.datastore.entity.GoodsInfo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingDBHelper extends SQLiteOpenHelper {
@@ -105,5 +107,22 @@ public class ShoppingDBHelper extends SQLiteOpenHelper {
         } finally {
             mWDB.endTransaction();
         }
+    }
+
+    public List<GoodsInfo> queryGoodsInfos(){
+        List<GoodsInfo> list = new ArrayList<>();
+        // 执行记录查询动作,该语句返回结果集的游标
+        Cursor cursor = mRDB.query(TABLE_GOODS_INFO, null, null, null, null, null, null);
+        // 循环取出游标指向的每条记录
+        while (cursor.moveToNext()) {
+            GoodsInfo info = new GoodsInfo();
+            info.setId(cursor.getInt(cursor.getColumnIndex("_id")));
+            info.setName(cursor.getString(cursor.getColumnIndex("name")));
+            info.setDescription(cursor.getString(cursor.getColumnIndex("description")));
+            info.setPrice(cursor.getFloat(cursor.getColumnIndex("price")));
+            info.setPicPath(cursor.getString(cursor.getColumnIndex("pic_path")));
+            list.add(info);
+        }
+        return list;
     }
 }
