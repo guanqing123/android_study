@@ -1,13 +1,11 @@
 package com.example.datastore;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-import java.util.Objects;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AppWriteActivity extends AppCompatActivity implements View.OnClickListener {
 

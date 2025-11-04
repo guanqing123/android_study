@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoomWriteActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="    书名："
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_font_size"/>
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/editext_selector"
+            android:hint="请输入书籍名称"
+            android:inputType="textPersonName"
+            android:maxLength="11"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="    作者："
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_font_size"/>
+        <EditText
+            android:id="@+id/et_author"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/editext_selector"
+            android:hint="请输入作者姓名"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="出版社："
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_font_size"/>
+        <EditText
+            android:id="@+id/et_press"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/editext_selector"
+            android:hint="请输入出版社名称"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="    价格："
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_font_size"/>
+        <EditText
+            android:id="@+id/et_price"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/editext_selector"
+            android:hint="请输入书籍价格"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加"
+        android:textColor="@color/black"
+        android:textSize="@dimen/button_font_size"/>
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除"
+        android:textColor="@color/black"
+        android:textSize="@dimen/button_font_size"/>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改"
+        android:textColor="@color/black"
+        android:textSize="@dimen/button_font_size"/>
+
+    <Button
+        android:id="@+id/btn_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询"
+        android:textColor="@color/black"
+        android:textSize="@dimen/button_font_size"/>
+
+    <Button
+        android:id="@+id/btn_query_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="根据姓名查询"
+        android:textColor="@color/black"
+        android:textSize="@dimen/button_font_size"/>
+
+</LinearLayout>
