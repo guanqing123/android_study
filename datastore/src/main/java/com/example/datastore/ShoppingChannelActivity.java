@@ -10,6 +10,7 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -118,6 +119,7 @@ public class ShoppingChannelActivity extends AppCompatActivity implements View.O
         dbHelper.addCarInfo(info);
         int count = ++MyApplication.getInstance().goodsCount;
         tv_count.setText(String.valueOf(count));
+        Toast.makeText(this, "加购成功", Toast.LENGTH_SHORT).show();
     }
 
     @Override
