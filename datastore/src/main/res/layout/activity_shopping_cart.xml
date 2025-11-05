@@ -71,8 +71,6 @@
                         android:text="总价"
                         android:textColor="@color/black"
                         android:textSize="15sp"/>
-
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -101,19 +99,27 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center|right"
-                        android:text="总金额"
+                        android:text="总金额："
                         android:textColor="@color/black"
                         android:textSize="17sp"/>
 
+                    <TextView
+                        android:id="@+id/tv_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center|left"
+                        android:textColor="@color/red"
+                        android:textSize="25sp"/>
+
                     <Button
-                        android:id="@+id/btn_pay"
+                        android:id="@+id/btn_settle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="结算"
                         android:textColor="@color/black"
                         android:textSize="17sp"/>
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -138,14 +144,13 @@
                     android:textSize="17sp" />
 
                 <Button
-                    android:id="@+id/btn_shopping"
+                    android:id="@+id/btn_shopping_channel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="逛逛手机商场"
                     android:textColor="@color/black"
                     android:textSize="17sp" />
-
             </LinearLayout>
 
         </RelativeLayout>

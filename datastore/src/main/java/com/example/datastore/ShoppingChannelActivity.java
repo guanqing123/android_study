@@ -98,6 +98,14 @@ public class ShoppingChannelActivity extends AppCompatActivity implements View.O
             tv_name.setText(info.getName());
             tv_price.setText("￥" + info.getPrice());
 
+            // 商品图片点击
+            iv_thumb.setOnClickListener(v -> {
+                Intent intent = new Intent(ShoppingChannelActivity.this, ShoppingDetailActivity.class);
+                intent.putExtra("goods_id", info.getId());
+                startActivity(intent);
+            });
+
+            // 加入购物车按钮点击
             view.findViewById(R.id.btn_add).setOnClickListener(v -> {
                 addCart(info);
             });

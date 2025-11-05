@@ -170,4 +170,28 @@ public class ShoppingDBHelper extends SQLiteOpenHelper {
         }
         return list;
     }
+
+    // 删除购物车中的商品
+    public void deleteGoods(int goodsId) {
+        mWDB.execSQL("DELETE FROM " + TABLE_CART_INFO + " WHERE goods_id = ?", new Object[]{goodsId});
+    }
+
+    // 清空购物车
+    public void clearCart() {
+        mWDB.execSQL("DELETE FROM " + TABLE_CART_INFO);
+    }
+
+    public GoodsInfo getGoodsInfo(int goods_id) {
+        GoodsInfo info = null;
+        Cursor cursor = mRDB.rawQuery("SELECT * FROM " + TABLE_GOODS_INFO + " WHERE _id = ?", new String[]{goods_id + ""});
+        if (cursor.moveToNext()) {
+            info = new GoodsInfo();
+            info.setId(cursor.getInt(cursor.getColumnIndex("_id")));
+            info.setName(cursor.getString(cursor.getColumnIndex("name")));
+            info.setDescription(cursor.getString(cursor.getColumnIndex("description")));
+            info.setPrice(cursor.getFloat(cursor.getColumnIndex("price")));
+            info.setPicPath(cursor.getString(cursor.getColumnIndex("pic_path")));
+        }
+        return info;
+    }
 }
