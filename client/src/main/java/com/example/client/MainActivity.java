@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.btn_content_write).setOnClickListener(this);
         findViewById(R.id.btn_permission_lazy).setOnClickListener(this);
+        findViewById(R.id.btn_permission_hungry).setOnClickListener(this);
     }
 
     @Override
@@ -27,6 +28,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_permission_lazy: {
                 Intent intent = new Intent(this, PermissionLazyActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_permission_hungry: {
+                Intent intent = new Intent(this, PermissionHungryActivity.class);
                 startActivity(intent);
                 break;
             }
