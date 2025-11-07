@@ -1,4 +1,4 @@
-package com.example.client;
+package com.example.server.provider;
 
 import android.net.Uri;
 import android.provider.BaseColumns;

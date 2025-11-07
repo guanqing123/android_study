@@ -2,8 +2,10 @@ package com.example.client;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -64,6 +66,16 @@ public class ContentWriteActivity extends AppCompatActivity implements View.OnCl
                     }
                     cursor.close();
                 }
+                break;
+            }
+            case R.id.btn_delete: {
+                //content://com.example.server.provider.UserInfoProvider/user/2
+                Uri uri = ContentUris.withAppendedId(UserInfoContent.CONTENT_URI, 8);
+                int count = getContentResolver().delete(uri, null, null);
+
+                //content://com.example.server.provider.UserInfoProvider/user
+                //int count = getContentResolver().delete(UserInfoContent.CONTENT_URI, "name=?", new String[]{"Jack"});
+                Toast.makeText(this, "删除了"+count+"条数据", Toast.LENGTH_SHORT).show();
                 break;
             }
         }
