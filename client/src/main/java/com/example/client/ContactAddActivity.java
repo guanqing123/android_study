@@ -1,5 +1,6 @@
 package com.example.client;
 
+import android.content.ContentProviderOperation;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -12,6 +13,8 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.client.entity.Contact;
+
+import java.util.ArrayList;
 
 public class ContactAddActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -43,12 +46,67 @@ public class ContactAddActivity extends AppCompatActivity implements View.OnClic
                 contact.email = et_email.getText().toString();
 
                 // 方式一,使用ContentResolver多次写入,每次一个字段
-                addContacts(getContentResolver(), contact);
+                //addContacts(getContentResolver(), contact);
+                // 方式二,批处理方式
+                // 每一次操作都是一个ContentProviderOperation,构建一个操作集合,然后一次性执行
+                // 好处是,要么全部成功,要么全部失败,保证了事务的一致性
+                addFullContacts(getContentResolver(), contact);
+
                 break;
             }
             case R.id.btn_read_contact: {
                 break;
             }
+        }
+    }
+
+    // 往手机通讯录一次性添加一个联系人信息(包括主记录、姓名、电话号码、电子邮箱)
+    private void addFullContacts(ContentResolver contentResolver, Contact contact) {
+        // 创建一个插入联系人主记录的内容操作器
+        ContentProviderOperation op_main = ContentProviderOperation
+                .newInsert(ContactsContract.RawContacts.CONTENT_URI)
+                //java.lang.NullPointerException: Attempt to invoke virtual method 'java.util.Set android.content.ContentValues.keySet()' on a null object reference
+                .withValue(ContactsContract.RawContacts.ACCOUNT_NAME, null)
+                .build();
+
+        // 创建一个插入联系人姓名记录的内容操作器
+        ContentProviderOperation op_name = ContentProviderOperation
+                .newInsert(ContactsContract.Data.CONTENT_URI)
+                .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)
+                .withValue(ContactsContract.Data.MIMETYPE, ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE)
+                .withValue(ContactsContract.Data.DATA2, contact.name)
+                .build();
+
+        // 创建一个插入联系人电话记录的内容操作器
+        ContentProviderOperation op_phone = ContentProviderOperation
+                .newInsert(ContactsContract.Data.CONTENT_URI)
+                .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)
+                .withValue(ContactsContract.Data.MIMETYPE, ContactsContract.CommonDataKinds.Phone.CONTENT_ITEM_TYPE)
+                .withValue(ContactsContract.Data.DATA1, contact.phone)
+                .withValue(ContactsContract.Data.DATA2, ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE)
+                .build();
+
+        // 创建一个插入联系人邮箱记录的内容操作器
+        ContentProviderOperation op_email = ContentProviderOperation
+                .newInsert(ContactsContract.Data.CONTENT_URI)
+                .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)
+                .withValue(ContactsContract.Data.MIMETYPE, ContactsContract.CommonDataKinds.Email.CONTENT_ITEM_TYPE)
+                .withValue(ContactsContract.Data.DATA1, contact.email)
+                .withValue(ContactsContract.Data.DATA2, ContactsContract.CommonDataKinds.Email.TYPE_WORK)
+                .build();
+
+        try {
+            // 声明一个内容操作器的列表,并将上面四个操作器添加到该列表中
+            ArrayList<ContentProviderOperation> ops = new ArrayList<>();
+            // 将联系人信息添加到内容提供器操作集合中
+            ops.add(op_main);
+            ops.add(op_name);
+            ops.add(op_phone);
+            ops.add(op_email);
+            // 执行内容提供器操作集合
+            contentResolver.applyBatch(ContactsContract.AUTHORITY, ops);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
