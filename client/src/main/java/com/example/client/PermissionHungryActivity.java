@@ -63,7 +63,7 @@ public class PermissionHungryActivity extends AppCompatActivity implements View.
                     Log.d("gq", "所有权限获取成功");
                 } else {
                     // 部分权限获取失败
-                    for (int i = 0; i < grantResults.length; i++) {
+                    ok:for (int i = 0; i < grantResults.length; i++) {
                         if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
                             // 判断是什么权限没有获取成功
                             switch (permissions[i]) {
@@ -72,14 +72,14 @@ public class PermissionHungryActivity extends AppCompatActivity implements View.
                                     // 通讯录权限没有获取成功
                                     Toast.makeText(this, "获取通信录读写权限失败", Toast.LENGTH_SHORT).show();
                                     goToAppSetting();
-                                    break;
+                                    break ok;
                                 }
                                 case Manifest.permission.READ_SMS:
                                 case Manifest.permission.SEND_SMS: {
                                     // 通讯录权限没有获取成功
                                     Toast.makeText(this, "获取短信读写权限失败", Toast.LENGTH_SHORT).show();
                                     goToAppSetting();
-                                    break;
+                                    break ok;
                                 }
                             }
                         }
