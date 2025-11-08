@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".ContactAddActivity"
+            android:exported="false" />
+        <activity
             android:name=".PermissionHungryActivity"
             android:exported="false" />
         <activity
