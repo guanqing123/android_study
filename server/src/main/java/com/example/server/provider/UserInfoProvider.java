@@ -36,7 +36,13 @@ public class UserInfoProvider extends ContentProvider {
         Log.d("gq", "UserInfoProvider insert");
         if (URI_MATCHER.match(uri) == USERS) {
             SQLiteDatabase db = dbHelper.getWritableDatabase();
-            db.insert(UserDBHelper.TABLE_NAME, null, values);
+            long rowId = db.insert(UserDBHelper.TABLE_NAME, null, values);
+            /*if (rowId > 0) { // 判断插入是否执行成功
+                // 如果添加成功,就利用新记录的行号生成新的地址
+                Uri userUri = ContentUris.withAppendedId(UserInfoContent.CONTENT_URI, rowId);
+                // 通知监听器,数据已经该表
+                getContext().getContentResolver().notifyChange(userUri, null);
+            }*/
         }
         return uri;
     }
