@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -79,8 +80,9 @@ public class SendMmsActivity extends AppCompatActivity implements View.OnClickLi
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == RESULT_OK) {
-            // 获取图片的uri
+            // 获取图片的uri content://com.android.providers.downloads.documents/document/msf%3A22
             uri = data.getData();
+            Log.d("gq", "uri:" + uri);
             iv_appendix.setImageURI(uri);
         }
     }
