@@ -42,6 +42,13 @@
                 android:text="ContactAdd"
                 android:textAllCaps="false"/>
 
+            <Button
+                android:id="@+id/btn_monitor_sms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MonitorSms"
+                android:textAllCaps="false"/>
+
         </LinearLayout>
     </ScrollView>
 

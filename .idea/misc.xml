@@ -30,6 +30,7 @@
         <entry key="client/src/main/res/layout/activity_contact_add.xml" value="0.24479166666666666" />
         <entry key="client/src/main/res/layout/activity_content_write.xml" value="0.25" />
         <entry key="client/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="client/src/main/res/layout/activity_monitor_sms.xml" value="0.25" />
         <entry key="client/src/main/res/layout/activity_permission_hungry.xml" value="0.25" />
         <entry key="client/src/main/res/layout/activity_permission_lazy.xml" value="0.335" />
         <entry key="datastore/src/main/res/drawable/checkbox_selector.xml" value="0.2609375" />
