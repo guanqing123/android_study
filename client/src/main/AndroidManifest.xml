@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".SendMmsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MonitorSmsActivity"
             android:exported="false" />
         <activity

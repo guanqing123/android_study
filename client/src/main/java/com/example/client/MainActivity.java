@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_permission_hungry).setOnClickListener(this);
         findViewById(R.id.btn_contact_add).setOnClickListener(this);
         findViewById(R.id.btn_monitor_sms).setOnClickListener(this);
+        findViewById(R.id.btn_send_mms).setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +46,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_monitor_sms: {
                 Intent intent = new Intent(this, MonitorSmsActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_send_mms: {
+                Intent intent = new Intent(this, SendMmsActivity.class);
                 startActivity(intent);
                 break;
             }
