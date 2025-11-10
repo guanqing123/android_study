@@ -63,6 +63,13 @@
                 android:text="ProviderMms"
                 android:textAllCaps="false"/>
 
+            <Button
+                android:id="@+id/btn_provider_apk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ProviderApk"
+                android:textAllCaps="false"/>
+
         </LinearLayout>
     </ScrollView>
 

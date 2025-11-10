@@ -10,10 +10,13 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" /> <!-- 短信 -->
     <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
-
-<!--    读取外部存储卡-->
+    <uses-permission android:name="android.permission.SEND_SMS" /> <!-- 读取外部存储卡 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+<!--  android11之后,要获取存款卡上的内容 getPackageArchiveInfo  -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+<!--    安装应用请求, Android8.0 需要-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:allowBackup="true"
@@ -22,6 +25,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".ProviderApkActivity"
+            android:exported="false" />
         <activity
             android:name=".ProviderMmsActivity"
             android:exported="false" />
@@ -51,14 +57,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- 兼容Android7.0，把访问文件的Uri 方式改为FileProvider -->
-        <!-- android:grantUriPermissions 必须设置为 true  -->
+        </activity> <!-- 兼容Android7.0，把访问文件的Uri 方式改为FileProvider -->
+        <!-- android:grantUriPermissions 必须设置为 true -->
         <provider
-            android:authorities="@string/file_provider"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="@string/file_provider"
             android:grantUriPermissions="true">
+
             <!-- 配置哪些路径是可以通过FileProvider访问的 -->
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"

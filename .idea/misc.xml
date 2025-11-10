@@ -33,6 +33,7 @@
         <entry key="client/src/main/res/layout/activity_monitor_sms.xml" value="0.25" />
         <entry key="client/src/main/res/layout/activity_permission_hungry.xml" value="0.25" />
         <entry key="client/src/main/res/layout/activity_permission_lazy.xml" value="0.335" />
+        <entry key="client/src/main/res/layout/activity_provider_apk.xml" value="0.25" />
         <entry key="client/src/main/res/layout/activity_provider_mms.xml" value="0.1" />
         <entry key="client/src/main/res/layout/activity_send_mms.xml" value="0.1" />
         <entry key="datastore/src/main/res/drawable/checkbox_selector.xml" value="0.2609375" />

@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_monitor_sms).setOnClickListener(this);
         findViewById(R.id.btn_send_mms).setOnClickListener(this);
         findViewById(R.id.btn_provider_mms).setOnClickListener(this);
+        findViewById(R.id.btn_provider_apk).setOnClickListener(this);
     }
 
     @Override
@@ -57,6 +58,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_provider_mms: {
                 Intent intent = new Intent(this, ProviderMmsActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_provider_apk: {
+                Intent intent = new Intent(this, ProviderApkActivity.class);
                 startActivity(intent);
                 break;
             }
