@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.2598958333333333" />
+        <entry key="../../Library/Android/sdk/platforms/android-30/data/res/layout/simple_spinner_item.xml" value="0.24479166666666666" />
         <entry key="activity/src/main/res/layout/activity_act_finish.xml" value="0.1" />
         <entry key="activity/src/main/res/layout/activity_act_receive.xml" value="0.1644021739130435" />
         <entry key="activity/src/main/res/layout/activity_act_request.xml" value="0.25" />
@@ -57,6 +58,10 @@
         <entry key="datastore/src/main/res/layout/item_cart.xml" value="0.25" />
         <entry key="datastore/src/main/res/layout/item_goods.xml" value="0.335" />
         <entry key="datastore/src/main/res/layout/title_shopping.xml" value="0.1" />
+        <entry key="highcontrols/src/main/res/layout/activity_main.xml" value="0.24479166666666666" />
+        <entry key="highcontrols/src/main/res/layout/activity_spinner_dialog.xml" value="0.2359375" />
+        <entry key="highcontrols/src/main/res/layout/activity_spinner_dropdown.xml" value="0.1" />
+        <entry key="highcontrols/src/main/res/layout/item_select.xml" value="0.24479166666666666" />
         <entry key="middlecontrols/src/main/res/drawable/btn_nine_selector.xml" value="0.2609375" />
         <entry key="middlecontrols/src/main/res/drawable/checkbox_selector.xml" value="0.26145833333333335" />
         <entry key="middlecontrols/src/main/res/drawable/editext_selector.xml" value="0.2609375" />

@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/client" />
             <option value="$PROJECT_DIR$/datastore" />
+            <option value="$PROJECT_DIR$/highcontrols" />
             <option value="$PROJECT_DIR$/middlecontrols" />
             <option value="$PROJECT_DIR$/server" />
             <option value="$PROJECT_DIR$/simplecontrols" />
