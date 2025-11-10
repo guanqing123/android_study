@@ -2,7 +2,7 @@
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
 
 <!--    sdcard 下所有文件都可以访问-->
-<!--    <external-path name="external_storage_root" path="."/>-->
+    <external-path name="external_storage_root" path="."/>
 <!--    只有该目录下的文件可以访问-->
-    <external-path name="external_storage_download" path="Download"/>
+<!--    <external-path name="external_storage_download" path="Download"/>-->
 </paths>

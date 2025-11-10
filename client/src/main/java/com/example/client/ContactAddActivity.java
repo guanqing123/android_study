@@ -1,20 +1,26 @@
 package com.example.client;
 
+import android.Manifest;
 import android.content.ContentProviderOperation;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.client.entity.Contact;
+import com.example.client.util.PermissionUtil;
 
 import java.util.ArrayList;
 
@@ -24,10 +30,18 @@ public class ContactAddActivity extends AppCompatActivity implements View.OnClic
     private EditText et_phone;
     private EditText et_email;
 
+    private String[] permissions = new String[]{
+            Manifest.permission.WRITE_CONTACTS,
+            Manifest.permission.READ_CONTACTS
+    };
+    private static final int REQUEST_CODE_CONTACT = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_add);
+        // 申请权限
+        PermissionUtil.checkPermissions(this, permissions, REQUEST_CODE_CONTACT);
 
         et_name = findViewById(R.id.et_name);
         et_phone = findViewById(R.id.et_phone);
@@ -38,9 +52,35 @@ public class ContactAddActivity extends AppCompatActivity implements View.OnClic
     }
 
     @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case REQUEST_CODE_CONTACT: {
+                if (PermissionUtil.checkGrant(grantResults)) {
+                    Log.d("gq", "权限申请成功");
+                } else {
+                    Toast.makeText(this, "通讯录申请权限失败", Toast.LENGTH_SHORT).show();
+                    goToAppSetting();
+                }
+                break;
+            }
+        }
+    }
+
+    // 跳转到应用设置页面
+    private void goToAppSetting() {
+        Intent intent = new Intent();
+        intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+        intent.setData(Uri.fromParts("package", getPackageName(), null));
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_add_contact: {
+                if (!PermissionUtil.checkPermissions(this, permissions, REQUEST_CODE_CONTACT))return;
                 // 创建一个联系人对象
                 Contact contact = new Contact();
                 contact.name = et_name.getText().toString();
@@ -56,6 +96,7 @@ public class ContactAddActivity extends AppCompatActivity implements View.OnClic
                 break;
             }
             case R.id.btn_read_contact: {
+                if (!PermissionUtil.checkPermissions(this, permissions, REQUEST_CODE_CONTACT))return;
                 readPhoneContacts(getContentResolver());
                 break;
             }
@@ -142,8 +183,10 @@ public class ContactAddActivity extends AppCompatActivity implements View.OnClic
             ops.add(op_email);
             // 执行内容提供器操作集合
             contentResolver.applyBatch(ContactsContract.AUTHORITY, ops);
+            Toast.makeText(this, "添加成功", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
+            Toast.makeText(this, "添加失败", Toast.LENGTH_SHORT).show();
         }
     }
 

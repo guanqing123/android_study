@@ -141,7 +141,7 @@ public class ProviderMmsActivity extends AppCompatActivity {
         }
     }
 
-    // 发送带图片的彩信
+    // 发送带图片的彩信 path = /storage/emulated/0/Download/IMG_0037.jpg
     private void sendMms(String phone, String title, String content, String path) {
         // 根据指定路径创建一个Uri对象
         Uri uri = Uri.parse(path);
