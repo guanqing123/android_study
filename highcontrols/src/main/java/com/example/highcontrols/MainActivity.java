@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.btn_spinner_dropdown).setOnClickListener(this);
         findViewById(R.id.btn_spinner_dialog).setOnClickListener(this);
+        findViewById(R.id.btn_spinner_icon).setOnClickListener(this);
     }
 
     @Override
@@ -27,6 +28,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_spinner_dialog:{
                 Intent intent = new Intent(this, SpinnerDialogActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_spinner_icon:{
+                Intent intent = new Intent(this, SpinnerIconActivity.class);
                 startActivity(intent);
                 break;
             }

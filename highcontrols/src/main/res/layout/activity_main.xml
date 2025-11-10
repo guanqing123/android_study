@@ -27,6 +27,13 @@
                 android:text="SpinnerDialog"
                 android:textAllCaps="false"/>
 
+            <Button
+                android:id="@+id/btn_spinner_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SpinnerIcon"
+                android:textAllCaps="false"/>
+
         </LinearLayout>
     </ScrollView>
 

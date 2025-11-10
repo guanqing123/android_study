@@ -61,7 +61,9 @@
         <entry key="highcontrols/src/main/res/layout/activity_main.xml" value="0.24479166666666666" />
         <entry key="highcontrols/src/main/res/layout/activity_spinner_dialog.xml" value="0.2359375" />
         <entry key="highcontrols/src/main/res/layout/activity_spinner_dropdown.xml" value="0.1" />
+        <entry key="highcontrols/src/main/res/layout/activity_spinner_icon.xml" value="0.234375" />
         <entry key="highcontrols/src/main/res/layout/item_select.xml" value="0.24479166666666666" />
+        <entry key="highcontrols/src/main/res/layout/item_simple.xml" value="0.24479166666666666" />
         <entry key="middlecontrols/src/main/res/drawable/btn_nine_selector.xml" value="0.2609375" />
         <entry key="middlecontrols/src/main/res/drawable/checkbox_selector.xml" value="0.26145833333333335" />
         <entry key="middlecontrols/src/main/res/drawable/editext_selector.xml" value="0.2609375" />
