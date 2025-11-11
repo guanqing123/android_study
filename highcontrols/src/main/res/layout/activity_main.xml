@@ -34,6 +34,13 @@
                 android:text="SpinnerIcon"
                 android:textAllCaps="false"/>
 
+            <Button
+                android:id="@+id/btn_base_adapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BaseAdapter"
+                android:textAllCaps="false"/>
+
         </LinearLayout>
     </ScrollView>
 
