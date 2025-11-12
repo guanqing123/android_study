@@ -41,6 +41,13 @@
                 android:text="BaseAdapter"
                 android:textAllCaps="false"/>
 
+            <Button
+                android:id="@+id/btn_convert_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ConvertView"
+                android:textAllCaps="false"/>
+
         </LinearLayout>
     </ScrollView>
 
