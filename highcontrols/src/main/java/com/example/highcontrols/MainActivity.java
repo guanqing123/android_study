@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_spinner_icon).setOnClickListener(this);
         findViewById(R.id.btn_base_adapter).setOnClickListener(this);
         findViewById(R.id.btn_convert_view).setOnClickListener(this);
+        findViewById(R.id.btn_list_view).setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +46,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_convert_view:{
                 Intent intent = new Intent(this, ConvertViewActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_list_view:{
+                Intent intent = new Intent(this, ListViewActivity.class);
                 startActivity(intent);
                 break;
             }
