@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_convert_view).setOnClickListener(this);
         findViewById(R.id.btn_list_view).setOnClickListener(this);
         findViewById(R.id.btn_list_focus).setOnClickListener(this);
+        findViewById(R.id.btn_shopping_channel).setOnClickListener(this);
     }
 
     @Override
@@ -57,6 +58,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_list_focus:{
                 Intent intent = new Intent(this, ListFocusActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_shopping_channel:{
+                Intent intent = new Intent(this, ShoppingChannelActivity.class);
                 startActivity(intent);
                 break;
             }
