@@ -9,7 +9,7 @@
 
     <include layout="@layout/title_shopping"/>
 
-    <ScrollView
+<!--    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -18,6 +18,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2"/>
-    </ScrollView>
+    </ScrollView>-->
+
+    <GridView
+        android:id="@+id/gv_channel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"/>
 
 </LinearLayout>
