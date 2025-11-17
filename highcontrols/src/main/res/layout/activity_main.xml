@@ -83,6 +83,13 @@
                 android:text="ViewPager"
                 android:textAllCaps="false"/>
 
+            <Button
+                android:id="@+id/btn_pager_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PagerTab"
+                android:textAllCaps="false"/>
+
         </LinearLayout>
     </ScrollView>
 
