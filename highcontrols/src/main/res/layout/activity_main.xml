@@ -104,6 +104,13 @@
                 android:text="FragmentStatic"
                 android:textAllCaps="false"/>
 
+            <Button
+                android:id="@+id/btn_fragment_dynamic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FragmentDynamic"
+                android:textAllCaps="false"/>
+
         </LinearLayout>
     </ScrollView>
 
