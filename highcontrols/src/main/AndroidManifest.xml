@@ -11,6 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:theme="@style/AppCompatTheme"
+            android:name=".LaunchSimpleActivity"
+            android:exported="false" />
+        <activity
             android:name=".PagerTabActivity"
             android:exported="false" />
         <activity

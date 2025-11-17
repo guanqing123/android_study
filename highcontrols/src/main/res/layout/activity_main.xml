@@ -90,6 +90,13 @@
                 android:text="PagerTab"
                 android:textAllCaps="false"/>
 
+            <Button
+                android:id="@+id/btn_launch_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LaunchSimple"
+                android:textAllCaps="false"/>
+
         </LinearLayout>
     </ScrollView>
 
