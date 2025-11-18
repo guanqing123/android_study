@@ -3,6 +3,7 @@ package com.example.highcontrols;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
@@ -30,8 +31,10 @@ public class BillAddActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill_add);
+        findViewById(R.id.iv_back).setOnClickListener(this);
         TextView tv_title = findViewById(R.id.tv_title);
         TextView tv_option = findViewById(R.id.tv_option);
+        tv_option.setOnClickListener(this);
         tv_title.setText("请填写账单");
         tv_option.setText("账单列表");
 
@@ -69,8 +72,7 @@ public class BillAddActivity extends AppCompatActivity implements View.OnClickLi
                 dialog.show();
                 break;
             }
-            case R.id.btn_save: {
-                // 保存订单信息
+            case R.id.btn_save: { // 保存订单信息
                 BillInfo billInfo = new BillInfo();
                 billInfo.date = tv_date.getText().toString();
                 billInfo.type = rg_type.getCheckedRadioButtonId() == R.id.rb_income ? BillInfo.BILL_TYPE_INCOME : BillInfo.BILL_TYPE_COST;
@@ -79,6 +81,15 @@ public class BillAddActivity extends AppCompatActivity implements View.OnClickLi
                 if (dbHelper.saveBillInfo(billInfo)>0) {
                     Toast.makeText(this, "添加账单成功", Toast.LENGTH_SHORT).show();
                 }
+                break;
+            }
+            case R.id.tv_option: {
+                Intent intent = new Intent(this, BillPagerActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.iv_back: {
+                finish();
                 break;
             }
         }
