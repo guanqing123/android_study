@@ -111,6 +111,13 @@
                 android:text="FragmentDynamic"
                 android:textAllCaps="false"/>
 
+            <Button
+                android:id="@+id/btn_fragment_launch_improve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FragmentLaunchImprove"
+                android:textAllCaps="false"/>
+
         </LinearLayout>
     </ScrollView>
 

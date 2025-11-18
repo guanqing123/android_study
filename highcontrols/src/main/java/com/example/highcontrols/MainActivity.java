@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_launch_simple).setOnClickListener(this);
         findViewById(R.id.btn_fragment_static).setOnClickListener(this);
         findViewById(R.id.btn_fragment_dynamic).setOnClickListener(this);
+        findViewById(R.id.btn_fragment_launch_improve).setOnClickListener(this);
     }
 
     @Override
@@ -99,6 +100,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_fragment_dynamic:{
                 Intent intent = new Intent(this, FragmentDynamicActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_fragment_launch_improve:{
+                Intent intent = new Intent(this, LaunchImproveActivity.class);
                 startActivity(intent);
                 break;
             }
