@@ -11,13 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:theme="@style/AppCompatTheme"
-            android:name=".BillPagerActivity"
+            android:name=".BillPagerSysActivity"
             android:exported="false" />
         <activity
-            android:name=".BillAddActivity"
+            android:name=".BillPagerActivity"
             android:exported="false"
             android:theme="@style/AppCompatTheme" />
+        <activity
+            android:theme="@style/AppCompatTheme"
+            android:name=".BillAddActivity"
+            android:exported="false" />
         <activity
             android:name=".LaunchImproveActivity"
             android:exported="false"

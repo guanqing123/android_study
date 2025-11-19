@@ -52,6 +52,7 @@ public class BillPagerActivity extends AppCompatActivity implements View.OnClick
         dbHelper = BillDBHelper.getInstance(this);
         dbHelper.openWriteLink();
         dbHelper.openReadLink();
+        Log.d("gq", "BillPagerActivity onCreate");
 
         initViewPager();
         initPagerTabStrip();
@@ -60,7 +61,7 @@ public class BillPagerActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        dbHelper.closeLink();
+        Log.d("gq", "BillPagerActivity onDestroy");
     }
 
     private void initViewPager() {

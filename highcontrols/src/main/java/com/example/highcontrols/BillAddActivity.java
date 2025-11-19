@@ -1,16 +1,21 @@
 package com.example.highcontrols;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.highcontrols.bean.BillInfo;
 import com.example.highcontrols.database.BillDBHelper;
@@ -26,17 +31,20 @@ public class BillAddActivity extends AppCompatActivity implements View.OnClickLi
     private EditText et_remark;
     private EditText et_amount;
     private BillDBHelper dbHelper;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill_add);
-        findViewById(R.id.iv_back).setOnClickListener(this);
+/*        findViewById(R.id.iv_back).setOnClickListener(this);
         TextView tv_title = findViewById(R.id.tv_title);
         TextView tv_option = findViewById(R.id.tv_option);
         tv_option.setOnClickListener(this);
         tv_title.setText("请填写账单");
-        tv_option.setText("账单列表");
+        tv_option.setText("账单列表");*/
+
+        setupToolbar();
 
         tv_date = findViewById(R.id.tv_date);
         rg_type = findViewById(R.id.rg_type);
@@ -53,12 +61,51 @@ public class BillAddActivity extends AppCompatActivity implements View.OnClickLi
         dbHelper = BillDBHelper.getInstance(this);
         dbHelper.openReadLink();
         dbHelper.openWriteLink();
+        Log.d("gq", "BillAddActiviy onCreate");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         dbHelper.closeLink();
+        Log.d("gq", "BillAddActiviy onDestroy");
+    }
+
+    private void setupToolbar() {
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // 隐藏标题
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        // 显示返回按钮（如果需要）
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // 返回按钮的点击事件
+        toolbar.setNavigationOnClickListener(v -> finish());
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_owner: {
+                Intent intent = new Intent(this, BillPagerActivity.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.menu_system: {
+                Intent intent = new Intent(this, BillPagerSysActivity.class);
+                startActivity(intent);
+                return true;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override

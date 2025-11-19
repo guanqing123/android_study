@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_menu"
+        android:title="账单列表"
+        android:tooltipText="账单列表"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/menu_owner"
+                android:title="自研账单列表" />
+
+            <item
+                android:id="@+id/menu_system"
+                android:title="系统账单列表" />
+        </menu>
+    </item>
+
+</menu>

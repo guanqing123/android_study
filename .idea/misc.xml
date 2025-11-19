@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.2598958333333333" />
+        <entry key="../../.gradle/caches/transforms-2/files-2.1/6ae3a5440d122d291bf8d36e0b4f53df/jetified-monthandyearpicker-1.3.0/res/layout/month_picker_dialog.xml" value="0.24479166666666666" />
+        <entry key="../../.gradle/caches/transforms-2/files-2.1/6ae3a5440d122d291bf8d36e0b4f53df/jetified-monthandyearpicker-1.3.0/res/layout/month_view_header.xml" value="0.24479166666666666" />
         <entry key="../../Library/Android/sdk/platforms/android-30/data/res/layout/simple_spinner_item.xml" value="0.24479166666666666" />
         <entry key="activity/src/main/res/layout/activity_act_finish.xml" value="0.1" />
         <entry key="activity/src/main/res/layout/activity_act_receive.xml" value="0.1644021739130435" />
@@ -58,9 +60,14 @@
         <entry key="datastore/src/main/res/layout/item_cart.xml" value="0.25" />
         <entry key="datastore/src/main/res/layout/item_goods.xml" value="0.335" />
         <entry key="datastore/src/main/res/layout/title_shopping.xml" value="0.1" />
+        <entry key="highcontrols/src/main/res/drawable/editext_selector.xml" value="0.2609375" />
         <entry key="highcontrols/src/main/res/drawable/list_selector.xml" value="0.25462962962962965" />
         <entry key="highcontrols/src/main/res/drawable/shape_oval_red.xml" value="0.26666666666666666" />
         <entry key="highcontrols/src/main/res/layout/activity_base_adapter.xml" value="0.1" />
+        <entry key="highcontrols/src/main/res/layout/activity_bill_add.xml" value="0.25" />
+        <entry key="highcontrols/src/main/res/layout/activity_bill_pager.xml" value="0.25" />
+        <entry key="highcontrols/src/main/res/layout/activity_bill_pager_new.xml" value="0.24479166666666666" />
+        <entry key="highcontrols/src/main/res/layout/activity_bill_pager_sys.xml" value="0.25" />
         <entry key="highcontrols/src/main/res/layout/activity_convert_view.xml" value="0.23072916666666668" />
         <entry key="highcontrols/src/main/res/layout/activity_fragment_dynamic.xml" value="0.1" />
         <entry key="highcontrols/src/main/res/layout/activity_fragment_static.xml" value="0.25" />
@@ -77,9 +84,13 @@
         <entry key="highcontrols/src/main/res/layout/activity_spinner_dropdown.xml" value="0.1" />
         <entry key="highcontrols/src/main/res/layout/activity_spinner_icon.xml" value="0.234375" />
         <entry key="highcontrols/src/main/res/layout/activity_view_pager.xml" value="0.2453125" />
+        <entry key="highcontrols/src/main/res/layout/fragment_bill_pager.xml" value="0.24479166666666666" />
+        <entry key="highcontrols/src/main/res/layout/fragment_bill_pager_sys.xml" value="0.25" />
         <entry key="highcontrols/src/main/res/layout/fragment_dynamic.xml" value="0.12314814814814815" />
         <entry key="highcontrols/src/main/res/layout/fragment_launch.xml" value="0.24479166666666666" />
         <entry key="highcontrols/src/main/res/layout/fragment_static.xml" value="0.23125" />
+        <entry key="highcontrols/src/main/res/layout/item_bill.xml" value="0.24479166666666666" />
+        <entry key="highcontrols/src/main/res/layout/item_bill_list.xml" value="0.24479166666666666" />
         <entry key="highcontrols/src/main/res/layout/item_cart.xml" value="0.25052083333333336" />
         <entry key="highcontrols/src/main/res/layout/item_goods.xml" value="0.25052083333333336" />
         <entry key="highcontrols/src/main/res/layout/item_grid.xml" value="0.1" />
@@ -88,7 +99,9 @@
         <entry key="highcontrols/src/main/res/layout/item_list_with_button.xml" value="0.24479166666666666" />
         <entry key="highcontrols/src/main/res/layout/item_select.xml" value="0.24479166666666666" />
         <entry key="highcontrols/src/main/res/layout/item_simple.xml" value="0.24479166666666666" />
+        <entry key="highcontrols/src/main/res/layout/title_booking.xml" value="0.25" />
         <entry key="highcontrols/src/main/res/layout/title_shopping.xml" value="0.25052083333333336" />
+        <entry key="highcontrols/src/main/res/menu/main_menu.xml" value="0.24479166666666666" />
         <entry key="middlecontrols/src/main/res/drawable/btn_nine_selector.xml" value="0.2609375" />
         <entry key="middlecontrols/src/main/res/drawable/checkbox_selector.xml" value="0.26145833333333335" />
         <entry key="middlecontrols/src/main/res/drawable/editext_selector.xml" value="0.2609375" />

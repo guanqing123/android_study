@@ -8,6 +8,11 @@ public class BillInfo implements Parcelable {
     public int id;
     public String date;
     public int type;
+
+    public double getAmount() {
+        return amount;
+    }
+
     public double amount;
     public String remark;
 

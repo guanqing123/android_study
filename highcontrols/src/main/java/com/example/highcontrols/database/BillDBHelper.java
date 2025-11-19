@@ -4,9 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import com.example.highcontrols.bean.BillInfo;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -87,6 +85,21 @@ public class BillDBHelper extends SQLiteOpenHelper {
     public List<BillInfo> getBillInfos(String begin, String end) {
         List<BillInfo> billInfos = new ArrayList<>();
         Cursor cursor = mRDB.rawQuery("SELECT * FROM " + TABLE_BILLS_INFO + " WHERE strftime('%Y-%m', date) BETWEEN ? AND ?", new String[]{begin, end});
+        while (cursor.moveToNext()) {
+            BillInfo billInfo = new BillInfo();
+            billInfo.id = cursor.getInt(cursor.getColumnIndex("_id"));
+            billInfo.date = cursor.getString(cursor.getColumnIndex("date"));
+            billInfo.type = cursor.getInt(cursor.getColumnIndex("type"));
+            billInfo.amount = cursor.getDouble(cursor.getColumnIndex("amount"));
+            billInfo.remark = cursor.getString(cursor.getColumnIndex("remark"));
+            billInfos.add(billInfo);
+        }
+        return billInfos;
+    }
+
+    public List<BillInfo> queryByMonth(String yearMonth) {
+        List<BillInfo> billInfos = new ArrayList<>();
+        Cursor cursor = mRDB.rawQuery("SELECT * FROM " + TABLE_BILLS_INFO + " WHERE strftime('%Y-%m', date) = ?", new String[]{yearMonth});
         while (cursor.moveToNext()) {
             BillInfo billInfo = new BillInfo();
             billInfo.id = cursor.getInt(cursor.getColumnIndex("_id"));
