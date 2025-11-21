@@ -13,11 +13,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <Button
                 android:id="@+id/btn_broad_standard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="BroadStandard"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_broad_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BroadOrder"
                 android:textAllCaps="false"/>
         </LinearLayout>
     </ScrollView>

@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_broad_standard).setOnClickListener(this);
+        findViewById(R.id.btn_broad_order).setOnClickListener(this);
     }
 
     @Override
@@ -20,6 +21,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_broad_standard:{
                 Intent intent = new Intent(this, BroadStandardActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_broad_order:{
+                Intent intent = new Intent(this, BroadOrderActivity.class);
                 startActivity(intent);
                 break;
             }

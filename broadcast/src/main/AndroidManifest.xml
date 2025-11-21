@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".BroadOrderActivity"
+            android:exported="false" />
+        <activity
             android:name=".BroadStandardActivity"
             android:exported="false" />
         <activity
