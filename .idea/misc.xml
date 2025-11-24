@@ -28,6 +28,7 @@
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/firt_layout.xml" value="0.19202898550724637" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2609375" />
+        <entry key="broadcast/src/main/res/layout/activity_alarm.xml" value="0.23072916666666668" />
         <entry key="broadcast/src/main/res/layout/activity_broad_order.xml" value="0.24479166666666666" />
         <entry key="broadcast/src/main/res/layout/activity_broad_standard.xml" value="0.25" />
         <entry key="broadcast/src/main/res/layout/activity_broad_static.xml" value="0.24479166666666666" />
