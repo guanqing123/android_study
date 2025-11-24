@@ -27,6 +27,13 @@
                 android:layout_height="wrap_content"
                 android:text="BroadOrder"
                 android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_broad_static"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BroadStatic"
+                android:textAllCaps="false"/>
         </LinearLayout>
     </ScrollView>
 
