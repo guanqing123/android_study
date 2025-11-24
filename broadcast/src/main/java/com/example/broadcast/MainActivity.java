@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_broad_standard).setOnClickListener(this);
         findViewById(R.id.btn_broad_order).setOnClickListener(this);
         findViewById(R.id.btn_broad_static).setOnClickListener(this);
+        findViewById(R.id.btn_broad_minute).setOnClickListener(this);
     }
 
     @Override
@@ -32,6 +33,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_broad_static:{
                 Intent intent = new Intent(this, BroadStaticActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_broad_minute:{
+                Intent intent = new Intent(this, SystemMinuteActivity.class);
                 startActivity(intent);
                 break;
             }
