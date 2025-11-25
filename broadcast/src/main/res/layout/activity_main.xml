@@ -55,6 +55,20 @@
                 android:layout_height="wrap_content"
                 android:text="BroadAlarm"
                 android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_life_cycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LifeCycle"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_change_direction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ChangeDirection"
+                android:textAllCaps="false"/>
         </LinearLayout>
     </ScrollView>
 

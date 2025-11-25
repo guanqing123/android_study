@@ -12,6 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".ChangeDirectionActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenLayout|screenSize"
+            android:screenOrientation="portrait"/><!-- 限制方向只能是竖屏 -->
+        <activity
+            android:name=".LifeCycleTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".AlarmActivity"
             android:exported="false" />
         <activity
