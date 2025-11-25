@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_broad_alarm).setOnClickListener(this);
         findViewById(R.id.btn_life_cycle).setOnClickListener(this);
         findViewById(R.id.btn_change_direction).setOnClickListener(this);
+        findViewById(R.id.btn_return_desktop).setOnClickListener(this);
     }
 
     @Override
@@ -62,6 +63,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_change_direction:{
                 Intent intent = new Intent(this, ChangeDirectionActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_return_desktop:{
+                Intent intent = new Intent(this, ReturnDesktopActivity.class);
                 startActivity(intent);
                 break;
             }

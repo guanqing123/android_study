@@ -69,6 +69,13 @@
                 android:layout_height="wrap_content"
                 android:text="ChangeDirection"
                 android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_return_desktop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ReturnDesktop"
+                android:textAllCaps="false"/>
         </LinearLayout>
     </ScrollView>
 
